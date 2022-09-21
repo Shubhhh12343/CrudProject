@@ -1,0 +1,23 @@
+
+<h1>Employee Registration</h1>
+
+<form action="{% url 'add_employee' %}" method="post">
+    {%csrf_token%}
+    <table>
+        <tr> <label for="name">Name:</label><br>
+            <input type="text" id="name" name="name"><br>
+            <label for="email">Email:</label><br>
+            <input type="email" id="email" name="email"><br>
+            <label for="contact">Contact</label><br>
+            <input type="number" id="number" name="number"><br>
+            <label for="age">Age:</label><br>
+            <input type="number" id="age" name="age"><br>
+            <label for="description">Description:</label><br>
+            <input type="text" id="desc" name="desc"><br>
+
+            <td><input type="submit" value="Save"></td>
+            
+        </tr>
+    </table>
+</form>
+
