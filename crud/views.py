@@ -54,10 +54,8 @@ def update_emp(request, id):
         return render(request, "crud/update.html", {'emp': get_obj})
 
     if request.method == "POST":
-
         get_id = request.POST['update']
         get_obj = Emp.objects.get(id=get_id)
-
         get_obj.name = request.POST['name']    
         get_obj.email = request.POST['email']
         get_obj.contact = request.POST['contact']
